@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Web Interface</title>
+</head>
+<body>
+    <h1>Interactive Web Interface</h1>
+    
+    <form action="/process" method="POST">
+        <label for="user_input">Enter Text:</label>
+        <input type="text" name="user_input" id="user_input">
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% if user_input %}
+    <p>Entered Text: {{ user_input }}</p>
+    <p>Processed Output: {{ processed_output }}</p>
+    {% endif %}
+</body>
+</html>
